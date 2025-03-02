@@ -23,7 +23,28 @@
         .box1{
             width:400px;
             height:400px;
+            animation: myAni 3s linear 0s infinite normal;
             background-color: aquamarine;
+        }
+        .box1:hover{
+            animation-play-state: paused;
+        }
+        @keyframes myAni{
+            0%{
+                width:400px;
+                height:400px;
+                background-color: aquamarine;
+            }
+            50%{
+                width:500px;
+                height:400px;
+                background-color: blue;
+            }
+            100%{
+                width:400px;
+                height:400px;
+                background-color: cadetblue;
+            }
         }
         .box2{
             width:2000px;
@@ -31,6 +52,32 @@
             background-image: url(./美女.jpg);
             background-repeat: no-repeat;
             background-size: contain;
+        }
+        .box{
+            width:400px;
+            height:400px;
+            background-color: blueviolet;
+            border-radius: 50%;
+            margin:40px auto;
+            box-shadow: 10px 10px 15px rgb(0, 0, 0,0.5);
+            animation: breathe 2s linear infinite alternate;
+        }
+        .box:hover{
+            animation-play-state: paused;
+        }
+        @keyframes breathe{
+            0%{
+                opacity: 0.2;
+                box-shadow: 10px 10px 15px rgba(82, 82, 211, 0);
+            }
+            50%{
+                opacity: 0.5;
+                box-shadow: 10px 10px 15px rgba(135, 85, 199, 0.5);
+            }
+            100%{
+                opacity: 1;
+                box-shadow: 10px 10px 15px rgb(163, 57, 198);
+            }
         }
         table,td{
             border:1px solid red;
@@ -78,6 +125,7 @@
     <p id="text1" class="min">good</p>
     <div class="box1"></div>
     <div class="box2"></div>
+    <div class="box"></div>
     <table>
         <tr>
             <td>table</td>
