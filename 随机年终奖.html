@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>年终奖抽奖</title>
+    </head>
+    <body>
+        <div>
+            <strong>年终奖抽奖现场</strong>
+            <h3>一等奖：<span  id="first">???</span></h3>
+            <h3>二等奖：<span id="second">???</span></h3>
+            <h3>三等奖：<span id="third">???</span></h3>
+        </div>
+        <script>
+            const prize = ['是那些','存面','聪明的','存储','山地车']
+            const firstprize = Math.floor(Math.random() * prize.length)
+            console.log(firstprize)
+            const firstperson = document.querySelector('#first')
+            firstperson.innerHTML = prize[firstprize]
+            prize.splice(firstprize,1)
+            const secondprize = Math.floor(Math.random() * prize.length)
+            const secondperson = document.querySelector('#second')
+            secondperson.innerHTML = prize[secondprize]
+            prize.splice(secondprize,1)
+            const thirdprize = prize[Math.floor(Math.random() * prize.length)]
+            const thirdperson = document.querySelector('#third')
+            thirdperson.innerHTML = thirdprize
+        </script>
+    </body>
+</html>
