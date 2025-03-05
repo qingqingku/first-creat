@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>第二页面</title>
+    <style>
+        table,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table></table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <script>
+        let students = [
+            {name:'小明', age:18,gender:'男',hometown:'河北省'},
+            {name:'小红', age:19,gender:'女',hometown:'河放省'},
+            {name:'小杠', age:17,gender:'男',hometown:'哈北省'},
+            {name:'小李', age:18,gender:'女',hometown:'胡北省'}
+        ]
+        document.write("<table>")
+        for(let i = 0;i < students.length;i++){
+            document.write(`
+                <tr>
+                    <td>${i+1}</td>
+                    <td>${students[i].name}</td>
+                    <td>${students[i].age}</td>
+                    <td>${students[i].hometown}</td>
+                </tr>
+            `)
+        }
+        document.write("</table>")
+    </script>
+</body>
